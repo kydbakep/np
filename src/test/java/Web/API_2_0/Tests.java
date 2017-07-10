@@ -104,5 +104,6 @@ public class Tests {
         Parser parser = new Parser();
         parser.parser();
         parser.anotherParser();
+        System.out.println();
     }
 }
