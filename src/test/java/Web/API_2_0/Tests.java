@@ -102,8 +102,7 @@ public class Tests {
 //        new JsonChecker_2(response.toJSONString());
 
         Parser parser = new Parser();
-        parser.parser();
-        parser.anotherParser();
-        System.out.println();
+        parser.parse();
+        parser.printAllDataNodes();
     }
 }

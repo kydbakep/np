@@ -27,7 +27,7 @@ public class Parser {
     public Parser() throws IOException, ParseException {
     }
 
-    public void parser() throws IOException, ParseException {
+    public void parse() throws IOException, ParseException {
 //        System.out.println(response.getClass());
 //        System.out.println(response.get("success"));
 //        System.out.println(response.get("data").getClass());
@@ -44,28 +44,27 @@ public class Parser {
 //                    ||
 //                    response.get(key).getClass().equals(Boolean.class))
             {
-
                 System.out.println(response.get(key));
                 JSONArray newarr = (JSONArray) response.get(key);
-                System.out.println(newarr.get(0));
+//                System.out.println(newarr.get(0));
                 objects.add((JSONObject) newarr.get(0));
 
             } else System.out.println("*" + response.get(key));
         }
+    }
 
+    public void printAllDataNodes() throws ParseException {
+        System.out.println("**************************************************");
         for (int i = 0; i < objects.size(); i++) {
             System.out.println("Response body object: " + i + ": " + objects.get(i));
+            if (objects.get(i).get("Errors").toString().length()>2){
+                String key = objects.get(i).get("Errors").toString();
+                System.out.println(key);
+            }
+            if (objects.get(i).get("Warnings").toString().length()>2){
+                String key = objects.get(i).get("Warnings").toString();
+                System.out.println(key);
+            }
         }
     }
-
-    public void anotherParser(){
-        Iterator it = response.keySet().iterator();
-        for (int i = 0; i < response.keySet().size(); i++){
-
-        }
-    }
-
-//    private Object getType(){
-//
-//    }
 }
