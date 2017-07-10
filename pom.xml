@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>novaposhta</groupId>
+    <artifactId>test-suite</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.20</version>
+                <configuration>
+                    <includes>
+                        <!--<include>**/Webclient/Tests.java</include>-->
+                        <include>**/API_2_0/Tests.java</include>
+                        <include>**/Webclient/GoogleTest.java</include>
+                    </includes>
+                    <environmentVariables>
+                        <DISPLAY>:10</DISPLAY>
+                        <!--<DISPLAY>:0</DISPLAY>-->
+                    </environmentVariables>
+                    <systemProperties>
+                        <property>
+                            <name>Xvfb</name>
+                            <value>:10</value>
+                        </property>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.20</version>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--========================================================================================-->
+    <!--<repository>-->
+    <!--<id>sonatype-snapshots</id>-->
+    <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+    <!--<snapshots>-->
+    <!--<enabled>true</enabled>-->
+    <!--</snapshots>-->
+    <!--</repository>-->
+
+    <!--========================================================================================-->
+
+    <dependencies>
+        <!-- логирование sl4j начало-->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+        </dependency>
+
+
+        <!--Генерирует кучу мусора!-->
+
+        <!--<dependency>-->
+        <!--<groupId>ch.qos.logback</groupId>-->
+        <!--<artifactId>logback-classic</artifactId>-->
+        <!--<version>1.0.13</version>-->
+        <!--</dependency>-->
+
+
+        <!-- логирование sl4j конец-->
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>3.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>1.2.5</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>1.2.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>info.cukes</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>1.2.4</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>1.5.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>1.3.0</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/net.lightbody.bmp/browsermob-core -->
+        <dependency>
+            <groupId>net.lightbody.bmp</groupId>
+            <artifactId>browsermob-core</artifactId>
+            <version>2.1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>de.sstoehr</groupId>
+            <artifactId>har-reader</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.6.4</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20090211</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.browsermob/browsermob-proxy -->
+
+
+        <dependency>
+            <groupId>com.googlecode.soundlibs</groupId>
+            <artifactId>tritonus-share</artifactId>
+            <version>0.3.7-2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.soundlibs</groupId>
+            <artifactId>mp3spi</artifactId>
+            <version>1.9.5-1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.soundlibs</groupId>
+            <artifactId>vorbisspi</artifactId>
+            <version>1.0.3-1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.appium</groupId>
+            <artifactId>java-client</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>log4j</groupId>-->
+        <!--<artifactId>log4j</artifactId>-->
+        <!--<version>1.2.17</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.193</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide</artifactId>
+            <version>4.4.3</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>2.3.26-incubating</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.8.0</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

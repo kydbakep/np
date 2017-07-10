@@ -1,0 +1,139 @@
+package com.novaposhta.awisfinaltestsuite.pages.catalogue.cashRegisters;
+
+import com.codeborne.selenide.Configuration;
+import static com.codeborne.selenide.Selenide.$;
+import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.ex.ElementNotFound;
+//import com.novaposhta.awisfinaltestsuite.pages.AuthPage;
+import java.util.ArrayList;
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+
+/**
+ * @author tober
+ */
+public class NameCrawler {
+
+    static List<WebElement> buttons = new ArrayList<>();
+    static List<WebElement> mainMenuButtonsList = new ArrayList<>();
+
+    public NameCrawler() {
+    }
+
+    public static void main(String[] args) throws Exception {
+        Configuration.browser = "chrome";
+        Configuration.browserSize = "1920x1080";
+        Configuration.holdBrowserOpen = true;
+        Configuration.timeout = 3000;
+
+        AuthPage page = new AuthPage("http://wis14.np.ua/ULKTest/clients/extjs/index.php", "homenko.a", "123");
+        page.gotoSite();
+
+        for (int i = 0; i < 30; i++) {
+            try {
+                page.checkForLoggedIn();
+                break;
+            } catch (ElementNotFound exc) {
+                waitFor((long) 0.5);
+                System.out.println("Waiting for loggen in...");
+            }
+        }
+
+//        openMenu(1);
+//        openMenu(2);
+//        openMenu(3);
+//        openMenu(4);
+//        openMenu(5);
+        openMenu(6);
+//        openMenu(7);
+//        openMenu(8);
+//        openMenu(9);
+//        openMenu(10);
+//        openMenu(11);
+
+    }
+
+    public static void getAllMenuItems(WebElement locator) {
+        SelenideElement el = (SelenideElement) locator;
+        List<WebElement> btn = el.findElements(By.xpath(mainMenuButtons));
+
+        for (int i = 0; i < btn.size(); i++) {
+            String name = btn.get(i).getText().replaceAll("\\p{Cntrl}", "");
+            String donor = ".//span[.='" + name.trim() + "']";
+            String s = "";
+            for (int j = 0; j < donor.length(); j++) {
+                s = donor;
+            }
+            WebElement element = $(By.xpath(s));
+            buttons.add(element);
+        }
+
+        for (int i = 0; i < buttons.size(); i++) {
+            System.out.println(buttons.get(i).getText());
+        }
+    }
+
+    public static void getTopLevelMenuItems(WebElement locator) throws InterruptedException {
+        SelenideElement el = (SelenideElement) locator;
+        List<WebElement> btn = el.findElements(By.xpath(topLevelMenuItems));
+
+        for (int i = 0; i < btn.size(); i++) {
+            String name = btn.get(i).getText().replaceAll("\\p{Cntrl}", "");
+
+            if (name.isEmpty()) {
+                $(btn.get(btn.size() - 1)).scrollTo().hover();
+                name = btn.get(i).getText().replaceAll("\\p{Cntrl}", "");
+            }
+            String donor = ".//span[normalize-space(text()) = normalize-space('"+name.trim()+"')]";
+            String s = "";
+            for (int j = 0; j < donor.length(); j++) {
+                s = donor;
+            }
+            WebElement element = $(By.xpath(s));
+            mainMenuButtonsList.add(element);
+
+            System.out.println("* " + i + " " + mainMenuButtonsList.get(i).getText());
+        }
+    }
+
+    public static void openMenu(int number) throws InterruptedException {
+        getAllMenuItems(mainMenu);
+        $(buttons.get(number - 1)).click();
+        getTopLevelMenuItems(topLevelMenuActive);
+        for (int i = 0; i < mainMenuButtonsList.size(); i++) {
+            {
+                String menuitem = mainMenuButtonsList.get(i).getText();
+                try {
+                    $(mainMenuButtonsList.get(i)).hover();
+                    menuitem = mainMenuButtonsList.get(i).getText();
+                    System.out.println(menuitem);
+                    $(mainMenuButtonsList.get(i)).hover().click();
+                    $(active).hover().click();
+                } catch (ElementNotFound e) {
+                    String smi = "//span[.='" + menuitem + "']/../img[contains(@id,'arrowEl')]";
+                    WebElement submenuitem = $(By.xpath(smi));
+                    try {
+                        submenuitem.getText();
+                        System.out.println("It is submenu");
+                    } catch (ElementNotFound ex) {
+                        System.out.println("It is NOT submenu");
+                    }
+                }
+            }
+            $(buttons.get(number - 1)).hover().click();
+        }
+    }
+
+    public static void waitFor(long seconds) throws InterruptedException {
+        Thread.sleep(seconds*1000);
+    }
+
+    //==============================================================================
+    private static final WebElement mainMenu = $(By.xpath(".//div[contains(@id,'panel')]"));
+    private static final String mainMenuButtons = "//div[contains(@id,'button')]";
+    private static final WebElement topLevelMenuActive = $(By.xpath(".//div[contains(@id,'menu-')][not(contains(@style,'visibility: hidden'))][not(contains(@id,'body'))]"));
+    private static final String topLevelMenuItems = "//div[contains(@id,'menuitem')]//span";
+    private static final WebElement active = $(By.xpath(".//div[contains(@class,'x-tab-active')]/a"));
+    private static final WebElement subMenuArrow = $(By.xpath("/../img[contains(@id,'arrowEl')]"));
+}
