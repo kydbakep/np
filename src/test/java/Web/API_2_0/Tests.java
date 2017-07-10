@@ -4,7 +4,6 @@ import Web.API_2_0.Classes.Parser;
 import Web.API_2_0.Classes.RequestSender;
 import Web.API_2_0.Classes.ResponseAnalyser;
 import Web.API_2_0.Classes.ResponseParser;
-import Web.API_2_0.old.Request;
 import org.json.JSONException;
 import org.json.simple.parser.ParseException;
 import org.junit.Before;
@@ -22,50 +21,50 @@ public class Tests {
     public void setup() {
     }
 
-//    @Test
-    public void postRequest00(){
-        Request request = new Request();
-        request.setFilePath("/storage/develop/projects/idea/awis/src/test/java/Web/API_2_0/json");
-        request.setJsonType("/corporate/");
-        request.setUrl("https://api.novaposhta.ua/v2.0/json/");
-
-        request.setFileName("createRegister");
-        try {
-            request.postJson();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-//    @Test //Создание ИД на адрес, строкой
-    public void postRequest01(){
-        Request request = new Request();
-        request.setFilePath("/storage/develop/project/idea/awis/src/test/java/Web/API_2_0/json");
-        request.setJsonType("/corporate/");
-        request.setUrl("https://api.novaposhta.ua/v2.0/json/");
-
-        request.setFileName("createCounterPartyRecipientOrganisation");
-        try {
-            request.postJson();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-//    @Test //Создание ИД на адрес, строкой
-    public void postRequest02(){
-        Request request = new Request();
-        request.setFilePath("/storage/develop/project/idea/awis/src/test/java/Web/API_2_0/json");
-        request.setJsonType("/loyalty/");
-        request.setUrl("https://api.novaposhta.ua/v2.0/json/");
-
-        request.setFileName("createInternetDocumentToAddress");
-        try {
-            request.postJson();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+////    @Test
+//    public void postRequest00(){
+//        Request request = new Request();
+//        request.setFilePath("/storage/develop/projects/idea/awis/src/test/java/Web/API_2_0/json");
+//        request.setJsonType("/corporate/");
+//        request.setUrl("https://api.novaposhta.ua/v2.0/json/");
+//
+//        request.setFileName("createRegister");
+//        try {
+//            request.postJson();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+////    @Test //Создание ИД на адрес, строкой
+//    public void postRequest01(){
+//        Request request = new Request();
+//        request.setFilePath("/storage/develop/project/idea/awis/src/test/java/Web/API_2_0/json");
+//        request.setJsonType("/corporate/");
+//        request.setUrl("https://api.novaposhta.ua/v2.0/json/");
+//
+//        request.setFileName("createCounterPartyRecipientOrganisation");
+//        try {
+//            request.postJson();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+////    @Test //Создание ИД на адрес, строкой
+//    public void postRequest02(){
+//        Request request = new Request();
+//        request.setFilePath("/storage/develop/project/idea/awis/src/test/java/Web/API_2_0/json");
+//        request.setJsonType("/loyalty/");
+//        request.setUrl("https://api.novaposhta.ua/v2.0/json/");
+//
+//        request.setFileName("createInternetDocumentToAddress");
+//        try {
+//            request.postJson();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 //    @Test //Тест парсера
     public void testParser() throws IOException, ParseException, JSONException {

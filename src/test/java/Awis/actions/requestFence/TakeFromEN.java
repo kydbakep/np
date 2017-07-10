@@ -1,7 +1,7 @@
 package Awis.actions.requestFence;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
+import Awis.Conditions;
+import Awis.Initializer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +20,7 @@ import java.io.IOException;
  * ! Created by tober on 17.02.17.
  */
 
-public class TakeFromEN extends Conditions{
+public class TakeFromEN extends Conditions {
     private Initializer init = new Initializer(driver);
     private WebDriverWait wait = new WebDriverWait(driver, 5);
 

@@ -1,10 +1,7 @@
 package Awis.actions.catalogue.counterparties;
 
-import ClearTest.Conditions;
-import ClearTest.actions.catalogue.CatalogueItemsOpener;
-import ClearTest.actions.catalogue.conglomerates.CitiesPage;
-import ClearTest.actions.catalogue.conglomerates.ConglomeratesPage;
-import ClearTest.actions.catalogue.conglomerates.DetailsPage;
+import Awis.Conditions;
+import Awis.actions.catalogue.CatalogueItemsOpener;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;

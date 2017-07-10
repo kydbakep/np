@@ -1,11 +1,7 @@
 package Awis.actions.catalogue.fiscalRegistrars;
 
-import ClearTest.Conditions;
-import ClearTest.TerminalsPage;
-import ClearTest.actions.catalogue.CatalogueItemsOpener;
-import ClearTest.actions.catalogue.cashRegisters.CashRegistersDetailsPage;
-import ClearTest.actions.catalogue.cashRegisters.CashRegistersPage;
-import ClearTest.toolbars.ToolbarTypeTwo;
+import Awis.Conditions;
+import Awis.actions.catalogue.CatalogueItemsOpener;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;

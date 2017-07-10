@@ -1,7 +1,6 @@
 package Awis;
 
-import ClearTest.toolbars.ToolbarTypeOne;
-import ClearTest.toolbars.ToolbarTypeTwo;
+import Awis.toolbars.ToolbarTypeOne;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;

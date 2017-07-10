@@ -1,7 +1,7 @@
 package Awis.actions.catalogue.conglomerates;
 
-import ClearTest.Conditions;
-import ClearTest.actions.catalogue.CatalogueItemsOpener;
+import Awis.Conditions;
+import Awis.actions.catalogue.CatalogueItemsOpener;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;

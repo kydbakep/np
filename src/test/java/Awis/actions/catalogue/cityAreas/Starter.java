@@ -1,11 +1,11 @@
 package Awis.actions.catalogue.cityAreas;
 
-import ClearTest.Conditions;
-import ClearTest.TerminalsPage;
-import ClearTest.actions.catalogue.CatalogueItemsOpener;
-import ClearTest.actions.catalogue.cashRegisters.CashRegistersDetailsPage;
-import ClearTest.actions.catalogue.cashRegisters.CashRegistersPage;
-import ClearTest.toolbars.ToolbarTypeTwo;
+import Awis.Conditions;
+import Awis.TerminalsPage;
+import Awis.actions.catalogue.CatalogueItemsOpener;
+import Awis.actions.catalogue.cashRegisters.CashRegistersDetailsPage;
+import Awis.actions.catalogue.cashRegisters.CashRegistersPage;
+import Awis.toolbars.ToolbarTypeTwo;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.chrome.ChromeDriver;

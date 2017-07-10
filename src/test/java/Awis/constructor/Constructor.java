@@ -1,7 +1,7 @@
 package Awis.constructor;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
+import Awis.Conditions;
+import Awis.Initializer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 

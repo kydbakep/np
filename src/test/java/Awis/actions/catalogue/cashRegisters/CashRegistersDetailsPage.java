@@ -1,10 +1,10 @@
 package Awis.actions.catalogue.cashRegisters;
 
-import ClearTest.CitiesPage;
-import ClearTest.Conditions;
-import ClearTest.Initializer;
-import ClearTest.TerminalsPage;
-import ClearTest.toolbars.ToolbarTypeTwo;
+import Awis.CitiesPage;
+import Awis.Conditions;
+import Awis.Initializer;
+import Awis.TerminalsPage;
+import Awis.toolbars.ToolbarTypeTwo;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * ! Created by tober on 17.02.17.
  */
 
-public class CashRegistersDetailsPage extends Conditions{
+public class CashRegistersDetailsPage extends Conditions {
     private Initializer init = new Initializer(driver);
     private WebDriverWait wait = new WebDriverWait(driver, 5);
     private ToolbarTypeTwo toolbarTypeTwo = new ToolbarTypeTwo(driver);

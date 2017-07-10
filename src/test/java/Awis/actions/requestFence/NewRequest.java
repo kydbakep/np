@@ -1,7 +1,7 @@
 package Awis.actions.requestFence;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
+import Awis.Conditions;
+import Awis.Initializer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
  * ! Created by tober on 15.02.17.
  */
 
-public class NewRequest extends Conditions{
+public class NewRequest extends Conditions {
     private Initializer init = new Initializer(driver);
 
     public NewRequest(WebDriver driver){

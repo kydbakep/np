@@ -1,8 +1,8 @@
 package Awis.actions.catalogue.parcelStations;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
-import ClearTest.toolbars.ToolbarTypeTwo;
+import Awis.Conditions;
+import Awis.Initializer;
+import Awis.toolbars.ToolbarTypeTwo;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  * ! Created by tober on 17.02.17.
  */
 
-public class ParcelStationDetailsPage extends Conditions{
+public class ParcelStationDetailsPage extends Conditions {
     private Initializer init = new Initializer(driver);
     private WebDriverWait wait = new WebDriverWait(driver, 5);
     private ToolbarTypeTwo toolbarTypeTwo = new ToolbarTypeTwo(driver);

@@ -1,10 +1,9 @@
 package Awis;
 
-import ClearTest.actions.createEN.*;
-import ClearTest.actions.requestFence.*;
-import ClearTest.actions.requestFence.SelectCargoType;
-import ClearTest.audio.AudioFilePlayer;
-import ClearTest.constructor.Constructor;
+import Awis.actions.createEN.*;
+import Awis.actions.requestFence.*;
+import Awis.audio.AudioFilePlayer;
+import Awis.constructor.Constructor;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

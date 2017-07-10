@@ -1,7 +1,7 @@
 package Awis.actions.requestFence;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
+import Awis.Conditions;
+import Awis.Initializer;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
  * ! Created by tober on 15.02.17.
  */
 
-public class WorkplaceOpener extends Conditions{
+public class WorkplaceOpener extends Conditions {
     private Initializer init = new Initializer(driver);
 
     public WorkplaceOpener(WebDriver driver){

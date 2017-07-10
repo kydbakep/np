@@ -1,6 +1,6 @@
 package Awis.actions.createEN;
 
-import ClearTest.Conditions;
+import Awis.Conditions;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +11,7 @@ import org.openqa.selenium.support.PageFactory;
  * ! Created by tober on 06.02.17.
  */
 
-public class SetCost extends Conditions{
+public class SetCost extends Conditions {
     public SetCost(WebDriver driver){
         Conditions.driver = driver;
         PageFactory.initElements(driver, this);

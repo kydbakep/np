@@ -1,11 +1,11 @@
 package Awis.actions.catalogue.fiscalRegistrars;
 
-import ClearTest.CitiesPage;
-import ClearTest.Conditions;
-import ClearTest.Initializer;
-import ClearTest.TerminalsPage;
-import ClearTest.toolbars.CounterpatiesPage;
-import ClearTest.toolbars.Toolbar;
+import Awis.CitiesPage;
+import Awis.Conditions;
+import Awis.Initializer;
+import Awis.TerminalsPage;
+import Awis.toolbars.CounterpatiesPage;
+import Awis.toolbars.Toolbar;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,7 @@ import org.openqa.selenium.support.PageFactory;
  * ! Created by tober on 17.02.17.
  */
 
-public class FiscalRegistrarsDetailsPage extends Conditions{
+public class FiscalRegistrarsDetailsPage extends Conditions {
     private Initializer init = new Initializer(driver);
     private Toolbar toolbar = new Toolbar(driver);
     private CitiesPage city = new CitiesPage(driver);

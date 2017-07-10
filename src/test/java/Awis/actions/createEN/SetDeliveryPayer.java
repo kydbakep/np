@@ -1,6 +1,6 @@
 package Awis.actions.createEN;
 
-import ClearTest.Conditions;
+import Awis.Conditions;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

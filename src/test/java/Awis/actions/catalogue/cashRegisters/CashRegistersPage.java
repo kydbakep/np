@@ -1,9 +1,9 @@
 package Awis.actions.catalogue.cashRegisters;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
-import ClearTest.actions.catalogue.conglomerates.CitiesPage;
-import ClearTest.toolbars.ToolbarTypeTwo;
+import Awis.CitiesPage;
+import Awis.Conditions;
+import Awis.Initializer;
+import Awis.toolbars.ToolbarTypeTwo;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,18 +12,15 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.security.Principal;
-import java.security.PrivateKey;
-
 /**
  * ! Created by tober on 17.02.17.
  */
 
-public class CashRegistersPage extends Conditions{
+public class CashRegistersPage extends Conditions {
     private Initializer init = new Initializer(driver);
     private WebDriverWait wait = new WebDriverWait(driver, 5);
     private ToolbarTypeTwo toolbar = new ToolbarTypeTwo(driver);
-    private ClearTest.CitiesPage city = new ClearTest.CitiesPage(driver);
+    private CitiesPage city = new CitiesPage(driver);
 
     public CashRegistersPage(WebDriver driver){
         Conditions.driver = driver;

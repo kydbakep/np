@@ -1,8 +1,8 @@
 package Awis.actions.catalogue.fiscalRegistrars;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
-import ClearTest.toolbars.Toolbar;
+import Awis.Conditions;
+import Awis.Initializer;
+import Awis.toolbars.Toolbar;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +13,7 @@ import org.openqa.selenium.support.PageFactory;
  * ! Created by tober on 17.02.17.
  */
 
-public class FiscalRegistrarsPage extends Conditions{
+public class FiscalRegistrarsPage extends Conditions {
     private Initializer init = new Initializer(driver);
     private Toolbar toolbar = new Toolbar(driver);
 

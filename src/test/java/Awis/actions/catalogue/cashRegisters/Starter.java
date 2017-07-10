@@ -1,8 +1,8 @@
 package Awis.actions.catalogue.cashRegisters;
 
-import ClearTest.Conditions;
-import ClearTest.actions.catalogue.CatalogueItemsOpener;
-import ClearTest.toolbars.ToolbarTypeTwo;
+import Awis.Conditions;
+import Awis.actions.catalogue.CatalogueItemsOpener;
+import Awis.toolbars.ToolbarTypeTwo;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -69,10 +69,6 @@ public class Starter extends Conditions {
 
 //            toolbar.clickOKButton();
 //            page.closeTab();
-
-
-
-
         }
     }
 

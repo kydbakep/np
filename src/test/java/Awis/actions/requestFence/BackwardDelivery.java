@@ -1,7 +1,10 @@
 package Awis.actions.requestFence;
 
-import ClearTest.Conditions;
-import ClearTest.Initializer;
+//import ClearTest.Conditions;
+//import ClearTest.Initializer;
+
+import Awis.Conditions;
+import Awis.Initializer;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,7 +30,7 @@ public class BackwardDelivery extends Conditions {
         waitForElementPresent(bdCargoTypeSelectButton);
 
         bdCargoTypeSelectButton.click();
-        init.cargoType().setType(type);
+//        init.cargoType().setType(type);
     }
 
     private void Description(String text){
