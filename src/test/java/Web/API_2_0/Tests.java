@@ -1,6 +1,5 @@
 package Web.API_2_0;
 
-import Web.API_2_0.Classes.Parser;
 import Web.API_2_0.Classes.RequestSender;
 import Web.API_2_0.Classes.ResponseAnalyser;
 import Web.API_2_0.Classes.ResponseParser;
@@ -80,7 +79,7 @@ public class Tests {
         System.out.println(parser.getKey("ContactPerson"));
     }
 
-//    @Test //Тест аналізатора
+    @Test //Тест аналізатора
     public void testAnalyser() throws IOException, ParseException, JSONException {
         RequestSender sender = new RequestSender();
         ResponseAnalyser analyser = new ResponseAnalyser();
@@ -101,8 +100,8 @@ public class Tests {
 //        new JsonChecker(response.toJSONString());
 //        new JsonChecker_2(response.toJSONString());
 
-        Parser parser = new Parser();
-        parser.parse();
-        parser.printAllDataNodes();
+//        Parser parser = new Parser();
+//        parser.parse();
+//        parser.printAllDataNodes();
     }
 }
