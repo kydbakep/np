@@ -1,1 +1,15 @@
-{"success":true,"data":[{"Ref":"e2adaba0-1dc3-11e7-8ba8-005056881c6b","Description":"Приватна особа","FirstName":"Фелікс","MiddleName":"Едуардович","LastName":"Яковлєв","Counterparty":"","OwnershipForm":"","OwnershipFormDescription":"","EDRPOU":"","CounterpartyType":"PrivatePerson","ContactPerson":{"success":true,"data":[{"Ref":"dee35fce-25b1-11e7-8ba8-005056881c6b","Description":"Яковлєв Фелікс Едуардович","LastName":"Яковлєв","FirstName":"Фелікс","MiddleName":"Едуардович"}],"errors":[],"warnings":["Person already exists!"],"info":[],"messageCodes":[],"errorCodes":[],"warningCodes":[],"infoCodes":[]}}],"errors":[],"warnings":[],"info":[],"messageCodes":[],"errorCodes":[],"warningCodes":[],"infoCodes":[]}
+{
+  "success": true,
+  "data": [
+    {
+      "ApiKey": "39c9b0a6cecf2a4368ee83abfaa7f597"
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "info": [],
+  "messageCodes": [],
+  "errorCodes": [],
+  "warningCodes": [],
+  "infoCodes": []
+}

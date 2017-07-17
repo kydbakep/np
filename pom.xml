@@ -22,9 +22,8 @@
                 <version>2.20</version>
                 <configuration>
                     <includes>
-                        <!--<include>**/Webclient/Tests.java</include>-->
                         <include>**/API_2_0/Tests.java</include>
-                        <include>**/Webclient/GoogleTest.java</include>
+                        <!--<include>**/Webclient/GoogleTest.java</include>-->
                     </includes>
                     <environmentVariables>
                         <DISPLAY>:10</DISPLAY>
@@ -36,6 +35,21 @@
                             <value>:10</value>
                         </property>
                     </systemProperties>
+                    <systemPropertyVariables>
+
+                        <awisURL>awis.url</awisURL>
+                        <awislogin>awis.login</awislogin>
+                        <awisPassword>awis.password</awisPassword>
+
+                        <apiURL>api.url</apiURL>
+                        <apiUserType>api.userType</apiUserType>
+                        <apiUserREF>api.userREF</apiUserREF>
+
+                        <webURL>webClient.url</webURL>
+                        <webLogin>webClient.login</webLogin>
+                        <webPassword>webClient.password</webPassword>
+
+                    </systemPropertyVariables>
                 </configuration>
             </plugin>
             <plugin>
@@ -43,7 +57,22 @@
                 <artifactId>maven-surefire-report-plugin</artifactId>
                 <version>2.20</version>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.0.2</version>
+
+            </plugin>
+
         </plugins>
+        <resources>
+            <resource>
+                <directory>src/test/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
     </build>
 
     <!--========================================================================================-->

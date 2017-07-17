@@ -1,5 +1,6 @@
 package Web.API_2_0;
 
+import Web.API_2_0.Classes.Generator;
 import Web.API_2_0.Classes.RequestSender;
 import Web.API_2_0.Classes.ResponseAnalyser;
 import Web.API_2_0.Classes.ResponseParser;
@@ -65,15 +66,15 @@ public class Tests {
 //        }
 //    }
 
-//    @Test //Тест парсера
+    //    @Test //Тест парсера
     public void testParser() throws IOException, ParseException, JSONException {
         ResponseParser parser = new ResponseParser();
-        parser.setNode(parser.getKey("data","ContactPerson","data"));
+        parser.setNode(parser.getKey("data", "ContactPerson", "data"));
         System.out.println(parser.getKey("Ref"));
         System.out.println(parser.getKey("success"));
-        System.out.println(parser.getKey("Description",1));
-        System.out.println(parser.getKey("Description",2));
-        System.out.println(parser.getKey("Description",3));
+        System.out.println(parser.getKey("Description", 1));
+        System.out.println(parser.getKey("Description", 2));
+        System.out.println(parser.getKey("Description", 3));
         parser.setNode(parser.getKey("data"));
         System.out.println(parser.getKey());
         System.out.println(parser.getKey("ContactPerson"));
@@ -103,5 +104,25 @@ public class Tests {
 //        Parser parser = new Parser();
 //        parser.parse();
 //        parser.printAllDataNodes();
+    }
+
+    @Test // Отримуэмо API ключ
+    public void getApiKey() throws IOException, ParseException, JSONException {
+        RequestSender sender = new RequestSender();
+        sender.sendRequest("loyalty", "generateApiKey");
+        ResponseParser parser = new ResponseParser();
+        parser.setNode(parser.getKey("data", "ApiKey"));
+        System.out.println("API key for loyal user: " + parser.getKey());
+
+        sender.sendRequest("corporate", "generateApiKey");
+        parser.setNode(parser.getKey("data", "ApiKey"));
+        System.out.println("API key for corporate user: " + parser.getKey());
+    }
+
+    @Test // Отримуємо API ключ за допомогою JSON запиту
+    public void getKey() throws ParseException, JSONException, IOException {
+        Generator generator = new Generator();
+        System.out.println(generator.getKey("loyalty"));
+        System.out.println(generator.getKey("corporate"));
     }
 }
