@@ -22,7 +22,8 @@
                 <version>2.20</version>
                 <configuration>
                     <includes>
-                        <include>**/API_2_0/Tests.java</include>
+                        <!--<include>**/API_2_0/Tests.java</include>-->
+                        <include>**/Testing/Testing.java</include>
                         <!--<include>**/Webclient/GoogleTest.java</include>-->
                     </includes>
                     <environmentVariables>
