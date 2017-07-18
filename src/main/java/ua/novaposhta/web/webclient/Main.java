@@ -10,20 +10,20 @@ import java.util.Properties;
  */
 public class Main {
 
-    private static Properties property = new Properties();
+//    public static void main(String[] args) {
+//        getProperties("awis");
+//        getProperties("web");
+//        getProperties("api");
+//    }
 
-    public static void main(String[] args) {
-        getProperties("awis");
-        getProperties("web");
-        getProperties("api");
-    }
-
-    private static void getProperties(String claster) {
+    public void getProperties(String claster) {
+        Properties property = new Properties();
         FileInputStream fis;
         String url;
         String login;
         String password;
         String ref;
+        String user;
 
         System.out.println("**********************");
 
@@ -52,9 +52,10 @@ public class Main {
         if (claster.equals("api")) {
                 url = property.getProperty("api.url");
                 login = property.getProperty("api.login");
-                ref = property.getProperty("api.ref");
+                ref = property.getProperty("api.userREF");
+                user = property.getProperty("env.USER");
 
-                System.out.println("URL: " + url + "\nLOGIN: " + login + "\nREF: " + ref);
+                System.out.println("URL: " + url + "\nLOGIN: " + login + "\nREF: " + ref+"\nUSER: "+user);
         }
     }
 }

@@ -35,21 +35,21 @@
                             <value>:10</value>
                         </property>
                     </systemProperties>
-                    <systemPropertyVariables>
+                    <!--<systemPropertyVariables>-->
+                        <!--<environment>${env.USER}</environment>-->
 
-                        <awisURL>awis.url</awisURL>
-                        <awislogin>awis.login</awislogin>
-                        <awisPassword>awis.password</awisPassword>
+                        <!--<awisURL>awis.url</awisURL>-->
+                        <!--<awislogin>awis.login</awislogin>-->
+                        <!--<awisPassword>awis.password</awisPassword>-->
 
-                        <apiURL>api.url</apiURL>
-                        <apiUserType>api.userType</apiUserType>
-                        <apiUserREF>api.userREF</apiUserREF>
+                        <!--<apiURL>api.url</apiURL>-->
+                        <!--<apiUserType>api.userType</apiUserType>-->
+                        <!--<apiUserREF>api.userREF</apiUserREF>-->
 
-                        <webURL>webClient.url</webURL>
-                        <webLogin>webClient.login</webLogin>
-                        <webPassword>webClient.password</webPassword>
-
-                    </systemPropertyVariables>
+                        <!--<webURL>webClient.url</webURL>-->
+                        <!--<webLogin>webClient.login</webLogin>-->
+                        <!--<webPassword>webClient.password</webPassword>-->
+                    <!--</systemPropertyVariables>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -85,6 +85,16 @@
     <!--</repository>-->
 
     <!--========================================================================================-->
+
+    <profiles>
+        <profile>
+            <id>my_profile</id>
+            <properties>
+                <test.param>${env.TEST_PARAM}</test.param>
+            </properties>
+        </profile>
+    </profiles>
+
 
     <dependencies>
         <!-- логирование sl4j начало-->

@@ -8,6 +8,7 @@ import org.json.JSONException;
 import org.json.simple.parser.ParseException;
 import org.junit.Before;
 import org.junit.Test;
+import ua.novaposhta.web.webclient.Main;
 
 import java.io.IOException;
 
@@ -124,5 +125,11 @@ public class Tests {
         Generator generator = new Generator();
         System.out.println(generator.getKey("loyalty"));
         System.out.println(generator.getKey("corporate"));
+    }
+
+    @Test // Передаємо параметр ззовні, через консольну команду
+    public void consoleTest(){
+        Main consoleTest = new Main();
+        consoleTest.getProperties("web");
     }
 }
