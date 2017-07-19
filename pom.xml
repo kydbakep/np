@@ -23,7 +23,7 @@
                 <configuration>
                     <includes>
                         <!--<include>**/API_2_0/Tests.java</include>-->
-                        <include>**/Testing/Testing.java</include>
+                        <include>**/Universal/Testing.java</include>
                         <!--<include>**/Webclient/GoogleTest.java</include>-->
                     </includes>
                     <environmentVariables>
@@ -36,21 +36,6 @@
                             <value>:10</value>
                         </property>
                     </systemProperties>
-                    <!--<systemPropertyVariables>-->
-                        <!--<environment>${env.USER}</environment>-->
-
-                        <!--<awisURL>awis.url</awisURL>-->
-                        <!--<awislogin>awis.login</awislogin>-->
-                        <!--<awisPassword>awis.password</awisPassword>-->
-
-                        <!--<apiURL>api.url</apiURL>-->
-                        <!--<apiUserType>api.userType</apiUserType>-->
-                        <!--<apiUserREF>api.userREF</apiUserREF>-->
-
-                        <!--<webURL>webClient.url</webURL>-->
-                        <!--<webLogin>webClient.login</webLogin>-->
-                        <!--<webPassword>webClient.password</webPassword>-->
-                    <!--</systemPropertyVariables>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -76,46 +61,30 @@
 
     </build>
 
-    <!--========================================================================================-->
-    <!--<repository>-->
-    <!--<id>sonatype-snapshots</id>-->
-    <!--<url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
-    <!--<snapshots>-->
-    <!--<enabled>true</enabled>-->
-    <!--</snapshots>-->
-    <!--</repository>-->
-
-    <!--========================================================================================-->
-
     <profiles>
         <profile>
             <id>my_profile</id>
             <properties>
-                <test.param>${env.TEST_PARAM}</test.param>
             </properties>
         </profile>
     </profiles>
 
 
     <dependencies>
-        <!-- логирование sl4j начало-->
+        <!-- логування sl4j початок-->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.25</version>
         </dependency>
-
-
-        <!--Генерирует кучу мусора!-->
-
+        <!--Генерує купу сміття!-->
         <!--<dependency>-->
         <!--<groupId>ch.qos.logback</groupId>-->
         <!--<artifactId>logback-classic</artifactId>-->
         <!--<version>1.0.13</version>-->
         <!--</dependency>-->
 
-
-        <!-- логирование sl4j конец-->
+        <!-- логування sl4j кінець-->
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
